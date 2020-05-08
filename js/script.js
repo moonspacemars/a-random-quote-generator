@@ -91,7 +91,8 @@ function printQuote(){
 }
 
 
-
-
 //click event listener for the print quote button
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+//refresh quotes every 12 second
+setInterval(printQuote, 12000);
