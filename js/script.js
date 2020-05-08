@@ -16,7 +16,8 @@ let quotes=[
     {
         quote: "Good friends, good books, and a sleepy conscience: this is the ideal life.",
         source: "Mark Twain",
-        citation: "https://www.goodreads.com/author/quotes/1244.Mark_Twain"
+        citation: "https://www.goodreads.com/author/quotes/1244.Mark_Twain",
+        tags: ['life', 'friends']
     },
     {
         quote: "I have not failed. I've just found 10,000 ways that won't work.",
@@ -42,7 +43,8 @@ let quotes=[
         quote: "Be the change that you wish to see in the world.",
         source: "Mahatma Gandhi",
         citation: "https://www.goodreads.com/author/quotes/5810891.Mahatma_Gandhi",
-        year:1913
+        year:1913,
+        tags:['wish', 'change']
     }       
 
 ];
@@ -70,6 +72,9 @@ function printQuote(){
     }
     if (quote.year){
         html+=`<span class="year">${quote.year}</span>`;        
+    }
+    if (quote.tags){
+        html+=`<span class="tags">${quote.tags}</span>`;
     }
     html+='</p>';
     document.getElementById('quote-box').innerHTML = html; 
