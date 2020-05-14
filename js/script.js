@@ -53,11 +53,13 @@ function getRandomQuote(){
     return quotes[randomIdx];
 }
 
+/**get random color  */
 function getRandomColor(){
-    let red=Math.floor(Math.random()*256);
-    let green=Math.floor(Math.random()*256);
-    let blue=Math.floor(Math.random()*256);
-    return `rgb(${red},${green},${blue})`;
+    let colors=[0,0,0];
+    for(let i=0; i<colors.length; i++){
+        colors[i]=Math.floor(Math.random()*256);
+    }
+    return `rgb(${colors[0]},${colors[1]},${colors[2]})`;    
 }
 
 
@@ -66,7 +68,7 @@ function getRandomColor(){
 
 //create quote information string and write to HTML
 function printQuote(){
-    let quote=getRandomQuote();
+    const quote=getRandomQuote();
     let html='';
     html+=`<p class="quote">${quote.quote}</p>`;
     html+=`<p class="source">${quote.source}`;
